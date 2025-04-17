@@ -1,6 +1,6 @@
 ---
 - name: Configuration Management Example
-  hosts: localhost
+  hosts: all
   connection: local
   become: yes
 
