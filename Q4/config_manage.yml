@@ -5,9 +5,9 @@
   become: yes
 
   tasks:
-    - name: Ensure user "tejas" exists
+    - name: Ensure user "manju" exists
       user:
-        name: manjula
+        name: manju
         state: present
         shell: /bin/bash
         create_home: yes
