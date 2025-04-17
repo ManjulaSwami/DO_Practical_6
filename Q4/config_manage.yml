@@ -27,14 +27,12 @@
           version = 1.0
         mode: '0644'
 
-    - name: Install and start nginx
+    - name: Install nginx
       apt:
         name: nginx
         state: present
         update_cache: yes
 
-    - name: Ensure nginx is running and enabled
-      service:
-        name: nginx
-        state: started
-        enabled: yes
+    - name: Start nginx directly (since systemctl won't work in WSL1)
+      command: nginx
+      ignore_errors: yes
